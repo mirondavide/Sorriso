@@ -700,6 +700,66 @@ main {
     box-shadow: 0 2px 6px rgba(206, 29, 29, 0.25);
 }
 
+/* Social Media Buttons */
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .social-buttons {
+        justify-content: flex-start;
+    }
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.social-btn svg,
+.social-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.tripadvisor-btn img {
+    filter: brightness(0) invert(1);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.facebook-btn:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+}
+
+.instagram-btn:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: #bc1888;
+}
+
+.tripadvisor-btn:hover {
+    background: #34E0A1;
+    border-color: #34E0A1;
+}
+
 /* Footer */
 footer {
     position: relative;
