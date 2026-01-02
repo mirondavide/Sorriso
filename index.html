@@ -13,26 +13,92 @@
     <header>
         <div class="container">
             <h1>🍕 Pizzeria Il Sorriso</h1>
-            <p class="tagline">Autentica pizza italiana dal 1985</p>
+            <p class="tagline">Autentica pizza napoletana a Medesano</p>
+            <div class="rating">
+                ⭐ 4,5 (276 recensioni) • 1-10 €
+            </div>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul>
+                <li><a href="#top-picks">Top Picks</a></li>
                 <li><a href="#classiche">Classiche</a></li>
                 <li><a href="#speciali">Speciali</a></li>
                 <li><a href="#gourmet">Gourmet</a></li>
-                <li><a href="#calzoni">Calzoni</a></li>
-                <li><a href="#rosticceria">Rosticceria</a></li>
+                <li><a href="#reviews">Recensioni</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
+            <a href="tel:0525421782" class="order-btn">Ordina Ora</a>
         </div>
     </nav>
 
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>La <strong>Migliore</strong> Pizza di Medesano</h2>
+            <p>Autentica tradizione napoletana dal 2009</p>
+            <a href="tel:0525421782" class="hero-cta">Chiama per Ordinare</a>
+        </div>
+    </section>
+
     <main class="container">
+        <!-- Top Picks Section -->
+        <section id="top-picks" class="top-picks-section">
+            <h2>Le Nostre Specialità</h2>
+            <p class="section-subtitle">I piatti più amati dai nostri clienti</p>
+            <div class="top-picks-grid">
+                <div class="pick-card">
+                    <div class="pick-icon">🍕</div>
+                    <h3>Pizze Classiche</h3>
+                    <p>Margherita, Marinara, e tutti i grandi classici napoletani</p>
+                    <a href="#classiche" class="pick-link">Scopri di più →</a>
+                </div>
+                <div class="pick-card">
+                    <div class="pick-icon">⭐</div>
+                    <h3>Pizze Gourmet</h3>
+                    <p>Creazioni speciali con ingredienti premium e DOP</p>
+                    <a href="#gourmet" class="pick-link">Scopri di più →</a>
+                </div>
+                <div class="pick-card">
+                    <div class="pick-icon">🥟</div>
+                    <h3>Calzoni</h3>
+                    <p>Ripieni generosi e gustosi, cotti al forno</p>
+                    <a href="#calzoni" class="pick-link">Scopri di più →</a>
+                </div>
+                <div class="pick-card">
+                    <div class="pick-icon">🍗</div>
+                    <h3>Rosticceria</h3>
+                    <p>Arancini, crocchette, pollo allo spiedo e tanto altro</p>
+                    <a href="#rosticceria" class="pick-link">Scopri di più →</a>
+                </div>
+            </div>
+        </section>
+
         <section class="welcome">
             <h2>Benvenuti!</h2>
             <p>Scoprite le nostre pizze preparate con ingredienti freschi e di qualità, cotte nel forno a legna secondo la tradizione napoletana.</p>
+        </section>
+
+        <section class="contact-info">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Dove siamo</h3>
+                    <p>Via Cavallotti, 2/4<br>43014 Medesano (PR)</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">☎️</div>
+                    <h3>Chiamaci</h3>
+                    <p><a href="tel:0525421782">0525 421782</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">⭐</div>
+                    <h3>Le recensioni</h3>
+                    <p>4,5 stelle<br>276 recensioni</p>
+                </div>
+            </div>
         </section>
 
         <!-- Pizze Classiche -->
@@ -406,12 +472,91 @@
                 </div>
             </div>
         </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews-section">
+            <h2>Cosa Dicono i Nostri Clienti</h2>
+            <p class="section-subtitle">⭐ 4,5 stelle - 276 recensioni</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"La migliore pizza di Medesano! Impasto perfetto, ingredienti freschi e servizio eccellente. Ci torniamo sempre!"</p>
+                    <p class="review-author">- Marco R.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Vera pizza napoletana come a Napoli! La bufala DOP è fantastica. Consigliatissimo!"</p>
+                    <p class="review-author">- Giulia M.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐</div>
+                    <p class="review-text">"Ottimo rapporto qualità-prezzo. Le pizze gourmet sono deliziose e i calzoni sono enormi!"</p>
+                    <p class="review-author">- Luca P.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <h2>Domande Frequenti</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quali sono gli orari di apertura?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Giovedì - Sabato - Domenica:</strong> 11:00-14:00, 18:00-22:00<br>
+                        <strong>Mercoledì:</strong> 12:00-22:00<br>
+                        <strong>Martedì:</strong> 12:00-22:00<br>
+                        <strong>Lunedì:</strong> Chiuso<br>
+                        <em>Gli orari possono variare</em></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Fate consegne a domicilio?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sì, consegniamo a domicilio nella zona di Medesano e dintorni. Chiamaci al 0525 421782 per ordinare!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Avete opzioni vegetariane o senza glutine?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sì, abbiamo diverse pizze vegetariane. Per le opzioni senza glutine, ti preghiamo di chiamarci in anticipo così possiamo prepararci.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso prenotare per grandi gruppi?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Assolutamente! Chiamaci con almeno un giorno di anticipo e saremo felici di organizzare il tuo evento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Pizzeria Il Sorriso - Autentica tradizione italiana</p>
-            <p>📍 Via Roma, 123 | ☎️ +39 123 456 7890 | 🕐 Aperto tutti i giorni 12:00-23:00</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pizzeria Il Sorriso</h3>
+                    <p>📍 Via Cavallotti, 2/4 - Medesano (PR) • ☎️ <a href="tel:0525421782">0525 421782</a></p>
+                    <p>⭐ 4,5 stelle (276 recensioni)</p>
+                </div>
+                <div class="footer-section">
+                    <a href="tel:0525421782" class="footer-cta">Ordina Ora</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Pizzeria Il Sorriso - Dal 2009</p>
         </div>
     </footer>
 
