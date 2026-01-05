@@ -90,23 +90,23 @@ const fadeInObserver = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Check if device is mobile (screen width < 1024px)
+const isMobile = window.innerWidth < 1024;
+
 // Observe elements for fade-in animation
 document.querySelectorAll('.menu-item, .pick-card, .review-card').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(30px)';
-
-    // Check if device is mobile (screen width < 1024px)
-    const isMobile = window.innerWidth < 1024;
-
     if (isMobile) {
-        // Mobile: No transition, instant appearance
+        // Mobile: Everything visible immediately, no animations
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
         item.style.transition = 'none';
     } else {
-        // Desktop: Fast transition (0.2s instead of 0.6s)
+        // Desktop: Fade-in animation
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px)';
         item.style.transition = `opacity 0.2s ease ${index * 0.03}s, transform 0.2s ease ${index * 0.03}s`;
+        fadeInObserver.observe(item);
     }
-
-    fadeInObserver.observe(item);
 });
 
 // FAQ Accordion functionality
