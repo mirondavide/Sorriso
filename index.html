@@ -10,38 +10,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="logoSorriso.png" alt="Il Sorriso" class="brand-icon">
-                <h1>Pizzeria Il Sorriso</h1>
-                <p class="tagline">Autentica pizza napoletana a Medesano dal 2009</p>
-                <a href="tel:0525421782" class="phone-link">
-                    <span class="phone-icon">📞</span>
-                    <span class="phone-number">0525 421782</span>
-                </a>
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logoSorriso.png" alt="Il Sorriso">
+                <span>Il Sorriso</span>
             </div>
-        </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#top-picks">Top Picks</a></li>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#top-picks">Specialità</a></li>
                 <li><a href="#classiche">Classiche</a></li>
                 <li><a href="#speciali">Speciali</a></li>
                 <li><a href="#gourmet">Gourmet</a></li>
                 <li><a href="#reviews">Recensioni</a></li>
                 <li><a href="#faq">FAQ</a></li>
+                <li><a href="tel:0525421782" class="nav-cta">Ordina</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>La <strong>Migliore</strong> Pizza di Medesano</h2>
-            <p>Autentica tradizione napoletana dal 2009</p>
-            <a href="tel:0525421782" class="hero-cta">Chiama per Ordinare</a>
+    <!-- Full-Screen Hero -->
+    <section id="hero" class="hero-fullscreen">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content-wrapper">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Pizzeria</span>
+                    <span class="hero-title-line hero-title-main">Il Sorriso</span>
+                </h1>
+                <p class="hero-subtitle">Autentica pizza napoletana a Medesano</p>
+                <div class="hero-actions">
+                    <a href="tel:0525421782" class="btn-primary">
+                        <span>📞</span>
+                        <span>Chiama Ora</span>
+                    </a>
+                    <a href="#top-picks" class="btn-secondary">
+                        <span>Scopri il Menu</span>
+                        <span>→</span>
+                    </a>
+                </div>
+                <div class="hero-info">
+                    <div class="info-item">
+                        <div class="info-icon">⭐</div>
+                        <div class="info-text">
+                            <strong>4.5</strong>
+                            <span>276 recensioni</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <a href="https://www.google.com/maps/dir//Via+Cavallotti,+2%2F4,+43014+Medesano+PR/@44.7627647,10.143824,21197m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x478065ed5f792169:0x3a52b111fb915a0a!2m2!1d10.1401988!2d44.7569934?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                                <strong>Medesano</strong>
+                                <span>Via Cavallotti 2/4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scorri</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
@@ -78,30 +116,6 @@
             </div>
         </section>
 
-        <section class="welcome">
-            <h2>Benvenuti!</h2>
-            <p>Scoprite le nostre pizze preparate con ingredienti freschi e di qualità, cotte nel forno a legna secondo la tradizione napoletana.</p>
-        </section>
-
-        <section class="contact-info">
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Dove siamo</h3>
-                    <p><a href="https://www.google.com/maps/search/?api=1&query=Via+Cavallotti+2%2F4+Medesano" target="_blank" rel="noopener noreferrer">Via Cavallotti, 2/4<br>43014 Medesano (PR)</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">☎️</div>
-                    <h3>Chiamaci</h3>
-                    <p><a href="tel:0525421782">0525 421782</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">⭐</div>
-                    <h3>Le recensioni</h3>
-                    <p>4,5 stelle<br>276 recensioni</p>
-                </div>
-            </div>
-        </section>
 
         <!-- Pizze Classiche -->
         <section id="classiche" class="menu-section">

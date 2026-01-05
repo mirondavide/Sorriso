@@ -1,13 +1,49 @@
-// Smooth scroll with offset for sticky navigation
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const floatingNav = document.querySelector('.floating-nav');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Navigation scroll effect
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    // Add scrolled class for backdrop blur effect
+    if (currentScroll > 100) {
+        floatingNav.classList.add('scrolled');
+    } else {
+        floatingNav.classList.remove('scrolled');
+    }
+
+    lastScroll = currentScroll;
+});
+
+// Smooth scroll with offset for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
+
+        if (targetId === '#') return;
+
         const targetSection = document.querySelector(targetId);
 
         if (targetSection) {
-            const navHeight = document.querySelector('nav').offsetHeight;
-            const targetPosition = targetSection.offsetTop - navHeight - 20;
+            const navHeight = 100; // Approximate nav height with margin
+            const targetPosition = targetSection.offsetTop - navHeight;
 
             window.scrollTo({
                 top: targetPosition,
@@ -17,10 +53,10 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Highlight active navigation item on scroll
+// Active navigation highlighting on scroll
 window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.menu-section[id]');
-    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-menu a:not(.nav-cta)');
 
     let current = '';
     sections.forEach(section => {
@@ -39,58 +75,39 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Add fade-in animation on scroll
+// Intersection Observer for scroll animations
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const fadeInObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
-            // Remove delay after animation completes for faster hover
-            setTimeout(() => {
-                entry.target.style.transition = 'all 0.2s ease';
-            }, 500);
         }
     });
 }, observerOptions);
 
-// Observe all menu items
-document.querySelectorAll('.menu-item').forEach((item, index) => {
+// Observe elements for fade-in animation
+document.querySelectorAll('.menu-item, .pick-card, .review-card').forEach((item, index) => {
     item.style.opacity = '0';
-    item.style.transform = 'translateY(20px)';
-    item.style.transition = `all 0.25s ease ${index * 0.02}s`;
-    observer.observe(item);
-});
+    item.style.transform = 'translateY(30px)';
 
-// Show/hide navigation on scroll
-let lastScroll = 0;
-const nav = document.querySelector('nav');
+    // Check if device is mobile (screen width < 1024px)
+    const isMobile = window.innerWidth < 1024;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll <= 0) {
-        nav.style.transform = 'translateY(0)';
-        return;
-    }
-
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scrolling down
-        nav.style.transform = 'translateY(-100%)';
+    if (isMobile) {
+        // Mobile: No transition, instant appearance
+        item.style.transition = 'none';
     } else {
-        // Scrolling up
-        nav.style.transform = 'translateY(0)';
+        // Desktop: Fast transition (0.2s instead of 0.6s)
+        item.style.transition = `opacity 0.2s ease ${index * 0.03}s, transform 0.2s ease ${index * 0.03}s`;
     }
 
-    lastScroll = currentScroll;
+    fadeInObserver.observe(item);
 });
-
-// Add transition to nav
-nav.style.transition = 'transform 0.3s ease';
 
 // FAQ Accordion functionality
 document.querySelectorAll('.faq-question').forEach(button => {
@@ -110,31 +127,35 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
-// Dynamic opening hours based on current day
-function updateOpeningHours() {
-    const today = new Date().getDay();
-    const openingHoursElement = document.getElementById('opening-hours');
 
-    const schedules = {
-        0: '11:00 - 14:00, 18:00 - 22:00', // Domenica (Sunday)
-        1: 'Chiuso',                        // Lunedì (Monday)
-        2: '12:00 - 22:00',                 // Martedì (Tuesday)
-        3: '12:00 - 22:00',                 // Mercoledì (Wednesday)
-        4: '11:00 - 14:00, 18:00 - 22:00', // Giovedì (Thursday)
-        5: '11:00 - 14:00, 18:00 - 22:00', // Venerdì (Friday)
-        6: '11:00 - 14:00, 18:00 - 22:00'  // Sabato (Saturday)
-    };
+// Add parallax effect to hero
+window.addEventListener('scroll', () => {
+    const heroBackground = document.querySelector('.hero-background');
+    const scrolled = window.pageYOffset;
 
-    const hours = schedules[today];
-
-    if (hours === 'Chiuso') {
-        openingHoursElement.textContent = 'Oggi: Chiuso';
-    } else {
-        openingHoursElement.textContent = `Aperto oggi: ${hours}`;
+    if (heroBackground) {
+        heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
+});
+
+// Hide scroll indicator after scrolling
+window.addEventListener('scroll', () => {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        if (window.pageYOffset > 100) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.pointerEvents = 'none';
+        } else {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.pointerEvents = 'all';
+        }
+    }
+});
+
+// Add transition to scroll indicator
+const scrollIndicator = document.querySelector('.scroll-indicator');
+if (scrollIndicator) {
+    scrollIndicator.style.transition = 'opacity 0.3s ease';
 }
 
-// Update opening hours on page load
-updateOpeningHours();
-
-console.log('🍕 Pizzeria Il Sorriso - Website loaded successfully!');
+console.log('🍕 Pizzeria Il Sorriso - Modern website loaded successfully!');
