@@ -106,4 +106,31 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
+// Dynamic opening hours based on current day
+function updateOpeningHours() {
+    const today = new Date().getDay();
+    const openingHoursElement = document.getElementById('opening-hours');
+
+    const schedules = {
+        0: '11:00 - 14:00, 18:00 - 22:00', // Domenica (Sunday)
+        1: 'Chiuso',                        // Lunedì (Monday)
+        2: '12:00 - 22:00',                 // Martedì (Tuesday)
+        3: '12:00 - 22:00',                 // Mercoledì (Wednesday)
+        4: '11:00 - 14:00, 18:00 - 22:00', // Giovedì (Thursday)
+        5: '11:00 - 14:00, 18:00 - 22:00', // Venerdì (Friday)
+        6: '11:00 - 14:00, 18:00 - 22:00'  // Sabato (Saturday)
+    };
+
+    const hours = schedules[today];
+
+    if (hours === 'Chiuso') {
+        openingHoursElement.textContent = 'Oggi: Chiuso';
+    } else {
+        openingHoursElement.textContent = `Aperto oggi: ${hours}`;
+    }
+}
+
+// Update opening hours on page load
+updateOpeningHours();
+
 console.log('🍕 Pizzeria Il Sorriso - Website loaded successfully!');
