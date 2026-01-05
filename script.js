@@ -50,6 +50,10 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+            // Remove delay after animation completes for faster hover
+            setTimeout(() => {
+                entry.target.style.transition = 'all 0.2s ease';
+            }, 500);
         }
     });
 }, observerOptions);
