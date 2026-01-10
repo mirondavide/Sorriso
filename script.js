@@ -81,39 +81,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const fadeInObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Check if device is mobile (screen width < 1024px)
-const isMobile = window.innerWidth < 1024;
-
-// Observe elements for fade-in animation
-document.querySelectorAll('.menu-item, .pick-card, .review-card').forEach((item, index) => {
-    if (isMobile) {
-        // Mobile: Everything visible immediately, no animations
-        item.style.opacity = '1';
-        item.style.transform = 'translateY(0)';
-        item.style.transition = 'none';
-    } else {
-        // Desktop: Fade-in animation
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(30px)';
-        item.style.transition = `opacity 0.2s ease ${index * 0.03}s, transform 0.2s ease ${index * 0.03}s`;
-        fadeInObserver.observe(item);
-    }
-});
+// Products are now visible immediately without scroll animations
 
 // FAQ Accordion functionality
 document.querySelectorAll('.faq-question').forEach(button => {
