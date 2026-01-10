@@ -14,25 +14,28 @@
     <!-- Floating Navigation -->
     <nav class="floating-nav">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="#" class="nav-logo">
                 <img src="logoSorriso.png" alt="Il Sorriso">
                 <span>Il Sorriso</span>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            </a>
             <ul class="nav-menu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#top-picks">Specialità</a></li>
                 <li><a href="#classiche">Classiche</a></li>
+                <li><a href="#farcite">Farcite</a></li>
+                <li><a href="#bufaline">Bufaline</a></li>
                 <li><a href="#speciali">Speciali</a></li>
-                <li><a href="#gourmet">Gourmet</a></li>
-                <li><a href="#reviews">Recensioni</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="tel:0525421782" class="nav-cta">Ordina</a></li>
+                <li><a href="#mezzi-metri">Mezzi Metri</a></li>
+                <li><a href="#rosticceria">Rosticceria</a></li>
+                <li><a href="#panuozzi">Panuozzi e Rotoli</a></li>
+                <li class="mobile-only"><a href="tel:0525421782" class="nav-cta">Ordina</a></li>
             </ul>
+            <div class="nav-right">
+                <a href="tel:0525421782" class="nav-cta">📞 Ordina</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -91,15 +94,15 @@
                 </div>
                 <div class="pick-card">
                     <div class="pick-icon">⭐</div>
-                    <h3>Pizze Gourmet</h3>
+                    <h3>Pizze Speciali</h3>
                     <p>Creazioni speciali con ingredienti premium e DOP</p>
-                    <a href="#gourmet" class="pick-link">Scopri di più →</a>
+                    <a href="#speciali" class="pick-link">Scopri di più →</a>
                 </div>
                 <div class="pick-card">
                     <div class="pick-icon">🥟</div>
-                    <h3>Calzoni</h3>
-                    <p>Ripieni generosi e gustosi, cotti al forno</p>
-                    <a href="#calzoni" class="pick-link">Scopri di più →</a>
+                    <h3>Pizze Farcite</h3>
+                    <p>Ripieni generosi e gustosi, ricche di sapore</p>
+                    <a href="#farcite" class="pick-link">Scopri di più →</a>
                 </div>
                 <div class="pick-card">
                     <div class="pick-icon">🍗</div>
@@ -111,326 +114,424 @@
         </section>
 
 
-        <!-- Pizze Classiche -->
+        <!-- Le Classiche -->
         <section id="classiche" class="menu-section">
-            <h2>Pizze Classiche</h2>
+            <h2>Le Classiche</h2>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Margherita</h3>
-                        <span class="price">€4.00</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, mozzarella</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
                         <h3>Marinara</h3>
-                        <span class="price">€3.50</span>
+                        <span class="price">€5,50</span>
                     </div>
-                    <p class="ingredients">Pomodoro, aglio, origano</p>
+                    <p class="ingredients">Pomodoro, origano e aglio</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Cotto</h3>
-                        <span class="price">€5.50</span>
+                        <h3>Margherita</h3>
+                        <span class="price">€6,00</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, prosciutto cotto</p>
+                    <p class="ingredients">Pomodoro, mozzarella e basilico</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
                         <h3>Funghi</h3>
-                        <span class="price">€5.00</span>
+                        <span class="price">€7,50</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, funghi</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Quattro Stagioni</h3>
-                        <span class="price">€6.00</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, mozzarella, carciofi, prosciutto cotto</p>
+                    <p class="ingredients">Pomodoro, mozzarella, funghi champignon freschi</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
                         <h3>Napoli</h3>
-                        <span class="price">€5.00</span>
+                        <span class="price">€7,50</span>
                     </div>
                     <p class="ingredients">Pomodoro, mozzarella, acciughe, origano</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Wurstel e Patatine</h3>
-                        <span class="price">€6.00</span>
+                        <h3>Salsiccia</h3>
+                        <span class="price">€7,50</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, wurstel, patatine</p>
+                    <p class="ingredients">Pomodoro, mozzarella, salsiccia</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cotto o Würstel</h3>
+                        <span class="price">€7,50</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, cotto o würstel</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Patatine</h3>
+                        <span class="price">€7,50</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, patatine fritte</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Diavola</h3>
+                        <span class="price">€7,50</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, salame piccante</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>4 Stagioni</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Base margherita, cotto, funghi, olive, carciofi</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Capricciosa</h3>
+                        <span class="price">€9,50</span>
+                    </div>
+                    <p class="ingredients">Base margherita, cotto, funghi, olive, carciofi, würstel</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Tonno e Cipolla</h3>
+                        <span class="price">€8,50</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, tonno e cipolla rossa di Tropea</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>4 Formaggi</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, brie, scamorza e gorgonzola</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Salsiccia o Würstel e Patatine</h3>
+                        <span class="price">€8,50</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, salsiccia o würstel e patatine</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Crudo di Parma 24 Mesi</h3>
+                        <span class="price">€8,00</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, Prosciutto crudo di Parma 24 mesi</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Margherita Sbagliata</h3>
+                        <span class="price">€8,50</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, bufala, grana, pepe, basilico</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Verdure Grigliate</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, zucchine, melanzane, peperoni (nostra produzione)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pizze Farcite -->
+        <section id="farcite" class="menu-section">
+            <h2>Pizze Farcite</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Mimosa</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Base di panna, mozzarella, cotto e mais</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Kebab</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Base margherita, carne kebab e patatine</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Pizza dello Chef</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Base margherita, pancetta, gorgonzola e patatine fritte</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Calabrese</h3>
+                        <span class="price">€9,50</span>
+                    </div>
+                    <p class="ingredients">Base margherita, salame piccante, cipolla rossa di Tropea, olive</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Tartufata</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Base margherita, crema di tartufo, pancetta, grana</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Carbonara</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Base margherita, pancetta, uovo, pepe, grana</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Alta Marea</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Base margherita, cipolla rossa di Tropea, gamberetti, pomodorini, brie</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Terribile</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Salame piccante, cotto, pancetta, salsiccia, olio piccante</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Fiocco</h3>
+                        <span class="price">€9,50</span>
+                    </div>
+                    <p class="ingredients">Base di panna, mozzarella, cotto, crocchetta di patate a fette</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Parma</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Base margherita, Prosciutto crudo 24 mesi, rucola, grana</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Rustica</h3>
+                        <span class="price">€9,50</span>
+                    </div>
+                    <p class="ingredients">Base margherita, salsiccia, cipolla rossa di Tropea e peperoni</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Salsiccia e Friarielli</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Mozzarella, salsiccia e friarielli</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Speck e Brie</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, brie e speck</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>La Delicata</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Base bianca, gamberetti, zucchine e pomodorini in cottura</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Vegetariana</h3>
+                        <span class="price">€11,00</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, mozzarella, verdure grigliate, funghi, carciofi, olive, rucola e radicchio</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>La Porchetta</h3>
+                        <span class="price">€11,00</span>
+                    </div>
+                    <p class="ingredients">Mozzarella, porchetta affumicata, patate al forno, scamorza</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pizze Bufaline -->
+        <section id="bufaline" class="menu-section">
+            <h2>Pizze Bufaline</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Bufala</h3>
+                        <span class="price">€8,50</span>
+                    </div>
+                    <p class="ingredients">Pomodoro, bufala Dop, basilico</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Caprese</h3>
+                        <span class="price">€9,50</span>
+                    </div>
+                    <p class="ingredients">Bufala, datterino rosso</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Vesuvio</h3>
+                        <span class="price">€10,00</span>
+                    </div>
+                    <p class="ingredients">Impasto alto, pomodoro, bufala Dop, basilico, grana</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Sorriso</h3>
+                        <span class="price">€11,00</span>
+                    </div>
+                    <p class="ingredients">Bufala, salsiccia, pomodorini, provola, origano</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Fresca Pazza</h3>
+                        <span class="price">€11,00</span>
+                    </div>
+                    <p class="ingredients">Base bianca, dopo cottura prosciutto crudo di Parma 24 mesi, bufala, rucola, pomodorini e grana</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Caprese 2.0</h3>
+                        <span class="price">€11,00</span>
+                    </div>
+                    <p class="ingredients">Base pomodoro, in uscita: bocconcini di bufala, pomodorini gialli e rossi, parmigiano a scaglie, olio e basilico</p>
                 </div>
             </div>
         </section>
 
         <!-- Pizze Speciali -->
         <section id="speciali" class="menu-section">
-            <h2>Pizze Speciali</h2>
+            <h2>Speciali</h2>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Carciofi</h3>
-                        <span class="price">€5.00</span>
+                        <h3>LA TRICOLORE</h3>
+                        <span class="price">€12,50</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, carciofi</p>
+                    <p class="ingredients">Base margherita, crudo di Parma, burrata e fonduta di parmigiano</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Tonno e Cipolle</h3>
-                        <span class="price">€6.00</span>
+                        <h3>MORTAZZA</h3>
+                        <span class="price">€11,00</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, tonno, cipolle</p>
+                    <p class="ingredients">Mozzarella, mortadella, stracciatella di bufala, pistacchio</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Mare e Monti</h3>
-                        <span class="price">€7.50</span>
+                        <h3>STRACCIATELLA</h3>
+                        <span class="price">€11,00</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, funghi, carciofi, frutti di mare</p>
+                    <p class="ingredients">Base margherita, prosciutto crudo di Parma 24 mesi, stracciatella di bufala e pomodorini gialli</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Pancetta</h3>
-                        <span class="price">€6.00</span>
+                        <h3>CRAVATTA</h3>
+                        <span class="price">€11,00</span>
                     </div>
-                    <p class="ingredients">Pomodoro, pancetta, Parmigiano Reggiano</p>
+                    <p class="ingredients">Un lato salsiccia e friarielli, un lato salame piccante, al centro un mini calzone ripieno di ricotta, decorazione con prosciutto crudo di Parma 24 mesi, rucola e grana</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Calabrese</h3>
-                        <span class="price">€6.00</span>
+                        <h3>NELLO</h3>
+                        <span class="price">€11,00</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, salame piccante, olive, cipolle</p>
+                    <p class="ingredients">Salsiccia, friarielli, bufala e crocchè di patate</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Mimosa</h3>
-                        <span class="price">€6.00</span>
+                        <h3>VULCANO</h3>
+                        <span class="price">€11,00</span>
                     </div>
-                    <p class="ingredients">Mozzarella, panna, prosciutto cotto, mais</p>
+                    <p class="ingredients">Un calzone a forma di pizza ripieno di patatine, ricotta, salame piccante, all'esterno bufala in un lago di pomodoro</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Stracchino e Rucola</h3>
-                        <span class="price">€6.00</span>
+                        <h3>LA CRISPY</h3>
+                        <span class="price">€11,00</span>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, crudo, stracchino, rucola, grana</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Speck e Brie <span class="badge">bianca</span></h3>
-                        <span class="price">€6.50</span>
-                    </div>
-                    <p class="ingredients">Mozzarella, speck, brie</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Frutti di Mare Freschi</h3>
-                        <span class="price">€6.50</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, pomodorini, olio extravergine, frutti di mare</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Vesuvio <span class="badge">pizza alta</span></h3>
-                        <span class="price">€6.50</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, bufala DOP, parmigiano in cottura</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Trevigiana</h3>
-                        <span class="price">€6.50</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, mozzarella, scamorza, speck</p>
+                    <p class="ingredients">Mozzarella, salsiccia, bacon, cheddar, patatine, salsa crispy</p>
                 </div>
             </div>
         </section>
 
-        <!-- Pizze Gourmet -->
-        <section id="gourmet" class="menu-section">
-            <h2>Pizze Gourmet</h2>
+        <!-- Mezzi Metri -->
+        <section id="mezzi-metri" class="menu-section">
+            <h2>Mezzi Metri</h2>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Vegetariana</h3>
-                        <span class="price">€7.50</span>
+                        <h3>MARGHERITA</h3>
+                        <span class="price">€15,00</span>
                     </div>
-                    <p class="ingredients">Base margherita, verdure alla griglia (radicchio, olive, funghi, rucola)</p>
+                    <p class="ingredients"></p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Piccante</h3>
-                        <span class="price">€6.00</span>
+                        <h3>UN INGREDIENTE*</h3>
+                        <span class="price">€20,00</span>
                     </div>
-                    <p class="ingredients">Base margherita, salame piccante</p>
+                    <p class="ingredients">*escluso bufala, friarielli, crocchè, crudo, speck</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Pig</h3>
-                        <span class="price">€5.50</span>
+                        <h3>FARCITE</h3>
+                        <span class="price">€20,00 - €25,00</span>
                     </div>
-                    <p class="ingredients">Base margherita, salsiccia</p>
+                    <p class="ingredients"></p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Vecchia Napoli</h3>
-                        <span class="price">€6.50</span>
+                        <h3>LE SPECIALI</h3>
+                        <span class="price">€28,00 - €30,00</span>
                     </div>
-                    <p class="ingredients">Pancetta, bufala DOP, friarielli napoletani, acciughe, pomodorini, olio</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Pizza dello Chef</h3>
-                        <span class="price">€6.00</span>
-                    </div>
-                    <p class="ingredients">Bacon, pancetta affumicata, patate al forno, mozzarella, gorgonzola</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Terribile</h3>
-                        <span class="price">€7.50</span>
-                    </div>
-                    <p class="ingredients">Base margherita, cotto, salamino piccante, bacon, peperoncino</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Bomba</h3>
-                        <span class="price">€8.00</span>
-                    </div>
-                    <p class="ingredients">Carciofi, cipolla, rucola, 4 formaggi (mozzarella, gorgonzola, fontina, parmigiano)</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Fresca Pazza</h3>
-                        <span class="price">€8.00</span>
-                    </div>
-                    <p class="ingredients">Pomodorini, bufala DOP, rucola, scaglie di Parmigiano Reggiano</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Alta Marea</h3>
-                        <span class="price">€7.50</span>
-                    </div>
-                    <p class="ingredients">Gamberetti, cipolla rossa di Tropea, olive, pomodorini</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Salsiccia e Friarielli</h3>
-                        <span class="price">€6.00</span>
-                    </div>
-                    <p class="ingredients">Mozzarella, salsiccia, friarielli freschi</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Bufala</h3>
-                        <span class="price">€6.00</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, bufala DOP</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Calzoni -->
-        <section id="calzoni" class="menu-section">
-            <h2>Calzoni</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Calzone Classico</h3>
-                        <span class="price">€6.00</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, mozzarella, prosciutto cotto, funghi</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Calzone Napoli</h3>
-                        <span class="price">€7.00</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, mozzarella, prosciutto cotto, ricotta, salame piccante, pepe</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Formati Speciali -->
-        <section class="menu-section">
-            <h2>Formati Speciali</h2>
-            <div class="menu-grid">
-                <div class="menu-item special">
-                    <div class="item-header">
-                        <h3>Mezzo Metro</h3>
-                        <span class="price">€10.00</span>
-                    </div>
-                    <p class="ingredients">Pizza da 50cm - scegliete i vostri ingredienti preferiti!</p>
-                </div>
-
-                <div class="menu-item special">
-                    <div class="item-header">
-                        <h3>Mezzo Metro Farcita</h3>
-                        <span class="price">€17.00</span>
-                    </div>
-                    <p class="ingredients">Pizza da 50cm con farcitura completa</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pizze della Casa -->
-        <section class="menu-section">
-            <h2>Pizze della Casa</h2>
-            <div class="menu-grid">
-                <div class="menu-item featured">
-                    <div class="item-header">
-                        <h3>Il Sorriso ⭐</h3>
-                        <span class="price">€7.00</span>
-                    </div>
-                    <p class="ingredients">Poco pomodoro, bufala DOP, scamorza, pancetta, salame, origano</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Pizza Pollucino</h3>
-                        <span class="price">€6.50</span>
-                    </div>
-                    <p class="ingredients">Pomodoro, mozzarella, pollo, patatine</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Chips</h3>
-                        <span class="price">€5.50</span>
-                    </div>
-                    <p class="ingredients">Margherita, patatine</p>
+                    <p class="ingredients"></p>
                 </div>
             </div>
         </section>
@@ -441,44 +542,128 @@
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Crocchette di Patate</h3>
-                        <span class="price">€1.00</span>
+                        <h3>Arancini di Ragù</h3>
+                        <span class="price">€3,00</span>
                     </div>
+                    <p class="ingredients"></p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Patatine Fritte</h3>
-                        <span class="price">€2.00</span>
+                        <h3>Crocché di Patate</h3>
+                        <span class="price">€2,00</span>
                     </div>
+                    <p class="ingredients"></p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Patate al Forno</h3>
-                        <span class="price">€2.50</span>
+                        <h3>Porzione di Patatine</h3>
+                        <span class="price">€3,00</span>
                     </div>
+                    <p class="ingredients"></p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Pollo allo Spiedo</h3>
-                        <span class="price">€7.00</span>
+                        <h3>Panzarotto</h3>
+                        <span class="price">€3,50</span>
                     </div>
+                    <p class="ingredients">Pomodoro, mozzarella, cotto</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Arancini</h3>
-                        <span class="price">€1.50</span>
+                        <h3>Crocchetta Mortazza</h3>
+                        <span class="price">€4,00</span>
                     </div>
+                    <p class="ingredients"></p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <h3>Pizza Fritta</h3>
-                        <span class="price">€2.50</span>
+                        <h3>Pizza Fritta Classica</h3>
+                        <span class="price">€7,50</span>
                     </div>
+                    <p class="ingredients">Pomodoro, mozzarella, cotto</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Pizza Fritta Salame Piccante</h3>
+                        <span class="price">€7,50</span>
+                    </div>
+                    <p class="ingredients"></p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Pizza Fritta Totò</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Mozzarella, salsiccia, friarielli, scamorza</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Pizza Fritta Napoli</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Mozzarella, pomodoro, ricotta, salame Napoli, cicoli napoletani, pepe</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panuozzi e Rotoli -->
+        <section id="panuozzi" class="menu-section">
+            <h2>Panuozzi e Rotoli</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>PANUOZZO TOTÒ</h3>
+                        <span class="price">€9,00</span>
+                    </div>
+                    <p class="ingredients">Salsiccia, friarielli, scamorza</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>PANUOZZO PRIMAVERA</h3>
+                        <span class="price">€8,00</span>
+                    </div>
+                    <p class="ingredients">Cotto, bufala, insalata, pomodorini</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>PANUOZZO TRICOLORE</h3>
+                        <span class="price">€8,50</span>
+                    </div>
+                    <p class="ingredients">Crudo, rucola, grana</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>ROTOLO KEBAB</h3>
+                        <span class="price">€6,00</span>
+                    </div>
+                    <p class="ingredients">Mozzarella, carne kebab, salse a scelta, patatine, insalata, cipolla, pomodorini</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>ROTOLO KEBAB XXL</h3>
+                        <span class="price">€8,00</span>
+                    </div>
+                    <p class="ingredients"></p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>ROTOLO MAGICO</h3>
+                        <span class="price">€12,00</span>
+                    </div>
+                    <p class="ingredients">Mozzarella, salsiccia o würstel a scelta, cipolla caramellata, patatine, fonduta di parmigiano. Il tutto ricoperto da patatine e fonduta in uscita.</p>
                 </div>
             </div>
         </section>
@@ -544,15 +729,6 @@
                         <p>Sì, abbiamo diverse pizze vegetariane. Per le opzioni senza glutine, ti preghiamo di chiamarci in anticipo così possiamo prepararci.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Posso prenotare per grandi gruppi?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Assolutamente! Chiamaci con almeno un giorno di anticipo e saremo felici di organizzare il tuo evento.</p>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -565,9 +741,9 @@
                     <h3>Pizzeria Il Sorriso</h3>
                 </div>
                 <div class="social-buttons">
-                    <a href="https://www.facebook.com/p/IL-Sorriso-100054404024861/" target="_blank" rel="noopener noreferrer" class="social-btn facebook-btn" title="Facebook" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor">
-                            <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
+                    <a href="https://www.tiktok.com/@nellosorrisosmile?_r=1&_t=ZN-92xHTpL05os" target="_blank" rel="noopener noreferrer" class="social-btn tiktok-btn" title="TikTok" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                            <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
                         </svg>
                     </a>
                     <a href="https://www.instagram.com/pizzeria_il_sorriso_medesano/" target="_blank" rel="noopener noreferrer" class="social-btn instagram-btn" title="Instagram" aria-label="Instagram">

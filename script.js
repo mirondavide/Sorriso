@@ -37,7 +37,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
 
-        if (targetId === '#') return;
+        if (targetId === '#') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return;
+        }
 
         const targetSection = document.querySelector(targetId);
 
