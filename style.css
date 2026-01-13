@@ -1308,7 +1308,6 @@ footer::before {
 }
 
 .product-hero-section {
-    padding-top: 7rem;
     padding-bottom: 1rem;
 }
 
@@ -1325,6 +1324,7 @@ footer::before {
     font-size: 0.95rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    margin-top: 6rem;
     margin-bottom: 1rem;
     border: 2px solid var(--gray-light);
 }
@@ -1448,10 +1448,102 @@ footer::before {
     }
 }
 
+/* Product Content Wrapper for Desktop Side-by-Side Layout */
+.product-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Product Page Desktop Layout */
+@media (min-width: 1024px) {
+    .product-detail-page {
+        padding-top: 7rem;
+    }
+
+    .product-detail-page > .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-content-wrapper {
+        flex-direction: row;
+        gap: 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        align-items: flex-start;
+    }
+
+    .product-hero-section {
+        flex: 0 0 45%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .product-image-full {
+        max-width: none;
+        padding: 0;
+    }
+
+    .product-detail-image {
+        max-height: 500px;
+        width: 100%;
+    }
+
+    .product-info-wrapper {
+        flex: 1;
+        background: transparent;
+        padding: 0 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-info-content {
+        max-width: none;
+        padding: 2rem 3rem;
+        text-align: center;
+    }
+
+    .product-detail-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .product-detail-price {
+        margin-bottom: 2.5rem;
+        font-size: 2.5rem;
+    }
+
+    .product-detail-description {
+        margin-bottom: 3rem;
+        padding: 0 2rem;
+    }
+
+    .product-detail-description h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .product-detail-description p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .product-actions {
+        justify-content: center;
+    }
+
+    .product-call-btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.15rem;
+    }
+}
+
 /* Product Page Responsive */
 @media (max-width: 768px) {
     .product-hero-section {
-        padding-top: 6rem;
         padding-bottom: 0.75rem;
     }
 

@@ -17,6 +17,9 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 
 // Load product data from localStorage
 document.addEventListener('DOMContentLoaded', () => {
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+
     const productData = JSON.parse(localStorage.getItem('currentProduct'));
 
     if (!productData) {
@@ -106,7 +109,8 @@ function createRecommendationCard(product) {
     card.className = 'recommendation-card';
     card.onclick = () => {
         localStorage.setItem('currentProduct', JSON.stringify(product));
-        window.location.reload();
+        window.scrollTo(0, 0);
+        window.location.href = 'product.html';
     };
 
     const hasImage = product.image && product.image !== 'null';
