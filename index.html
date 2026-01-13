@@ -9,6 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        // Prevent flash of hero section when navigating from product page
+        if (window.location.hash || (localStorage.getItem('menuScrollPosition') && !window.location.hash)) {
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+            document.documentElement.style.visibility = 'hidden';
+        }
+    </script>
 </head>
 <body>
     <!-- Floating Navigation -->
@@ -137,12 +146,15 @@
                     </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Funghi</h3>
-                        <span class="price">€7,50</span>
+                <div class="menu-item with-image">
+                    <img src="Funghi.webp" alt="Funghi" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Funghi</h3>
+                            <span class="price">€7,50</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, funghi champignon freschi</p>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, funghi champignon freschi</p>
                 </div>
 
                 <div class="menu-item with-image">
@@ -219,12 +231,15 @@
                     </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Tonno e Cipolla</h3>
-                        <span class="price">€8,50</span>
+                <div class="menu-item with-image">
+                    <img src="Tonno-e-Cipolla.webp" alt="Tonno e Cipolla" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Tonno e Cipolla</h3>
+                            <span class="price">€8,50</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, tonno e cipolla rossa di Tropea</p>
                     </div>
-                    <p class="ingredients">Pomodoro, mozzarella, tonno e cipolla rossa di Tropea</p>
                 </div>
 
                 <div class="menu-item">
@@ -301,12 +316,15 @@
                     <p class="ingredients">Base margherita, carne kebab e patatine</p>
                 </div>
 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3>Pizza dello Chef</h3>
-                        <span class="price">€10,00</span>
+                <div class="menu-item with-image">
+                    <img src="Chef.webp" alt="Pizza dello Chef" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Pizza dello Chef</h3>
+                            <span class="price">€10,00</span>
+                        </div>
+                        <p class="ingredients">Base margherita, pancetta, gorgonzola e patatine fritte</p>
                     </div>
-                    <p class="ingredients">Base margherita, pancetta, gorgonzola e patatine fritte</p>
                 </div>
 
                 <div class="menu-item">
