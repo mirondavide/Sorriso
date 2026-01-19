@@ -59,6 +59,7 @@ async function loadRecommendations(currentProductName) {
     // Sample products data (you can fetch this from index.html or a separate data file)
     const allProducts = [
         { name: 'Margherita', price: '€6,00', description: 'Pomodoro, fiordilatte e basilico', image: 'Margherita.webp' },
+        { name: 'Crudo di Parma 24 Mesi', price: '€8,00', description: 'Pomodoro, mozzarella, Prosciutto crudo di Parma 24 mesi', image: 'Crudo-24-Mesi.webp' },
         { name: 'Napoli', price: '€7,50', description: 'Pomodoro, fiordilatte, Acciughe e origano', image: 'Napoli.webp' },
         { name: 'Salsiccia', price: '€7,50', description: 'Pomodoro, fiordilatte e salsiccia', image: 'Salsiccia.webp' },
         { name: 'Cotto', price: '€7,50', description: 'Pomodoro, fiordilatte e prosciutto cotto', image: 'Cotto.webp' },
@@ -72,11 +73,13 @@ async function loadRecommendations(currentProductName) {
         { name: 'Verdure Grigliate', price: '€9,00', description: 'Pomodoro, fiordilatte, zucchine, melanzane e peperoni, tutte grigliate', image: 'Verdure-Grigliate.webp' },
         { name: 'Mimosa', price: '€9,00', description: 'Fiordilatte, panna, prosciutto cotto e mais', image: 'Mimosa.webp' },
         { name: 'Tartufata', price: '€10,00', description: 'Pomodoro, fiordilatte, pancetta, crema di tartufo e scaglie di grana', image: 'Tartufata.webp' },
+        { name: 'Carbonara', price: '€10,00', description: 'Base margherita, pancetta, uovo, pepe, grana', image: 'Carbonara.webp' },
         { name: 'Alta Marea', price: '€10,00', description: 'Pomodoro, fiordilatte, gamberetti, cipolla di tropea, pomodorini e brie', image: 'Alta-Marea.webp' },
         { name: 'Terribile', price: '€10,00', description: 'Pomodoro, fiordilatte, salame piccante, salsiccia, cotto, pancetta e olio piccante', image: 'Terribile.webp' },
         { name: 'Fiocco', price: '€9,50', description: 'Fiordilatte, panna, prosciutto cotto e crocchè di patate', image: 'Fiocco.webp' },
         { name: 'Parma', price: '€10,00', description: 'Pomodoro, fiordilatte, crudo di parma 24 mesi, rucola e scaglie di grana', image: 'Parma.webp' },
         { name: 'Salsiccia e Friarielli', price: '€9,00', description: 'Fiordilatte, Salsiccia e friarielli', image: 'Salsiccia-e-Friarielli.webp' },
+        { name: 'Rustica', price: '€9,50', description: 'Base margherita, salsiccia, cipolla rossa di Tropea e peperoni', image: 'Rustica.webp' },
         { name: 'La Porchetta', price: '€11,00', description: 'Fiordilatte, porchetta affumicata, patate al forno e scamorza', image: 'La-Porchetta.webp' },
         { name: 'Bufala', price: '€8,50', description: 'Pomodoro, mozzarella di bufala dop, basilico e olio evo', image: 'Bufala.webp' },
         { name: 'Caprese', price: '€9,50', description: 'Pomodoro, bufala dop e pomodorini', image: 'Caprese.webp' },
