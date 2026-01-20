@@ -273,7 +273,6 @@ function initProductNavigation() {
         };
 
         item.addEventListener('click', handleClick, true); // Use capture phase
-        item.addEventListener('touchstart', handleClick, { passive: false });
 
         console.log(`✅ Attached click handlers to menu item ${index}`);
     });
