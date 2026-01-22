@@ -250,11 +250,26 @@ function initProductNavigation() {
             }
 
             // Extract product data from the menu item
+            // Check for multiple images (image swap container)
+            const imageSwapContainer = item.querySelector('.image-swap-container');
+            let images = [];
+
+            if (imageSwapContainer) {
+                // Get both images from the swap container
+                const primaryImg = imageSwapContainer.querySelector('.item-image.primary');
+                const secondaryImg = imageSwapContainer.querySelector('.item-image.secondary');
+                if (primaryImg?.src) images.push(primaryImg.src);
+                if (secondaryImg?.src) images.push(secondaryImg.src);
+            } else if (imageEl?.src) {
+                images.push(imageEl.src);
+            }
+
             const productData = {
                 name: h3.textContent.trim(),
                 price: priceEl.textContent.trim(),
                 description: ingredientsEl.textContent.trim(),
-                image: imageEl?.src || null
+                image: images[0] || null,
+                images: images
             };
 
             console.log('🚀 Navigating to product page with data:', productData);
@@ -278,5 +293,16 @@ function initProductNavigation() {
     });
 }
 
+
+// Image swap touch support for mobile devices
+document.querySelectorAll('.image-swap-container').forEach(container => {
+    container.addEventListener('click', (e) => {
+        // Only toggle on touch devices (no hover support)
+        if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            e.stopPropagation(); // Prevent navigating to product page
+            container.classList.toggle('tapped');
+        }
+    });
+});
 
 console.log('🍕 Pizzeria Il Sorriso - Modern website loaded successfully!');

@@ -33,20 +33,42 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('product-price').textContent = productData.price;
     document.getElementById('product-description').textContent = productData.description || 'Deliziosa pizza preparata con ingredienti freschi e di qualità.';
 
-    // Handle image
-    const productImage = document.getElementById('product-image');
+    // Handle image(s)
+    const productImageContainer = document.getElementById('product-image-container');
     const heroSection = document.querySelector('.product-hero-section');
+    const images = productData.images || (productData.image ? [productData.image] : []);
 
-    if (productData.image) {
-        productImage.src = productData.image;
-        productImage.alt = productData.name;
+    if (images.length > 1) {
+        // Multiple images - create swap container
+        productImageContainer.innerHTML = `
+            <div class="product-image-swap-container">
+                <img src="${images[0]}" alt="${productData.name}" class="product-detail-image primary">
+                <img src="${images[1]}" alt="${productData.name} - Variante" class="product-detail-image secondary">
+            </div>
+        `;
+    } else if (images.length === 1) {
+        // Single image
+        productImageContainer.innerHTML = `
+            <img src="${images[0]}" alt="${productData.name}" class="product-detail-image">
+        `;
     } else {
-        // If no image, hide the hero section
+        // No image - hide the hero section
         heroSection.style.display = 'none';
     }
 
     // Set page title
     document.title = `${productData.name} - Pizzeria Il Sorriso`;
+
+    // Add touch support for image swap on product page
+    const imageSwapContainer = document.querySelector('.product-image-swap-container');
+    if (imageSwapContainer) {
+        imageSwapContainer.addEventListener('click', () => {
+            // Only toggle on touch devices (no hover support)
+            if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                imageSwapContainer.classList.toggle('tapped');
+            }
+        });
+    }
 
     // Load recommendations
     loadRecommendations(productData.name);
