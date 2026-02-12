@@ -428,7 +428,7 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 6rem 2rem 4rem;
+    padding: 10rem 2rem 4rem;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -1262,7 +1262,7 @@ footer::before {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero-content-wrapper {
-        padding: 1rem 1.5rem 3rem;
+        padding: 5rem 1.5rem 3rem;
     }
 
     .hero-info {
