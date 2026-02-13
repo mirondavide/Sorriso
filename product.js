@@ -56,8 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
         heroSection.style.display = 'none';
     }
 
-    // Set page title
+    // Update page title and meta tags for SEO/sharing
     document.title = `${productData.name} - Pizzeria Il Sorriso`;
+    updateMetaTags(productData);
 
     // Add touch support for image swap on product page
     const imageSwapContainer = document.querySelector('.product-image-swap-container');
@@ -128,6 +129,38 @@ async function loadRecommendations(currentProductName) {
         const card = createRecommendationCard(product);
         recommendationsContainer.appendChild(card);
     });
+}
+
+// Update meta tags dynamically for SEO and social sharing
+function updateMetaTags(productData) {
+    const title = `${productData.name} - Pizzeria Il Sorriso`;
+    const description = productData.description
+        ? `${productData.name}: ${productData.description} - Pizzeria Il Sorriso, Medesano (PR). Chiama 0525 421782.`
+        : `${productData.name} - Pizzeria Il Sorriso, Medesano (PR). Chiama 0525 421782.`;
+    const images = productData.images || (productData.image ? [productData.image] : []);
+    const imageUrl = images.length > 0
+        ? `https://www.ilsorrisopizzeria.it/${images[0]}`
+        : 'https://www.ilsorrisopizzeria.it/logoSorriso.webp';
+
+    // Meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', description);
+
+    // Open Graph
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', description);
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) ogImage.setAttribute('content', imageUrl);
+
+    // Twitter Card
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', title);
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', description);
+    const twImage = document.querySelector('meta[name="twitter:image"]');
+    if (twImage) twImage.setAttribute('content', imageUrl);
 }
 
 // Function to create a recommendation card

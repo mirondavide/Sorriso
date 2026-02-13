@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina non trovata - Pizzeria Il Sorriso</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/webp" href="logoSorriso.webp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-page h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .error-page h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .error-page p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+        .error-page a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .error-page a:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <h1>404</h1>
+        <h2>Pagina non trovata</h2>
+        <p>La pagina che stai cercando non esiste o è stata spostata.</p>
+        <a href="/">Torna al Menu</a>
+    </div>
+</body>
+</html>
