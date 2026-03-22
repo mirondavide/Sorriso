@@ -1185,6 +1185,25 @@ footer::before {
     z-index: 1;
 }
 
+.credits {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0.5rem 0 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.credits a {
+    color: rgba(212, 134, 15, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credits a:hover {
+    color: #d4860f;
+}
+
 /* Footer Responsive */
 @media (max-width: 768px) {
     .footer-logo {
