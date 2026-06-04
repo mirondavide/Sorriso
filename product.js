@@ -186,3 +186,26 @@ function createRecommendationCard(product) {
 
     return card;
 }
+
+// Cookie Consent Banner
+(function() {
+    var consent = localStorage.getItem('cookie-consent');
+    if (consent) return;
+
+    var banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+    banner.style.display = 'block';
+
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        banner.style.display = 'none';
+        if (typeof loadGoogleAnalytics === 'function') {
+            loadGoogleAnalytics();
+        }
+    });
+
+    document.getElementById('cookie-reject').addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'rejected');
+        banner.style.display = 'none';
+    });
+})();

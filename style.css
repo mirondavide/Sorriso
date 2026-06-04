@@ -1927,3 +1927,206 @@ footer::before {
 .product-image-swap-container.tapped .product-detail-image.secondary {
     opacity: 1;
 }
+
+/* Cookie Consent Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: var(--dark);
+    border-top: 2px solid var(--primary);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    animation: cookieSlideUp 0.4s ease-out;
+}
+
+@keyframes cookieSlideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.cookie-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.cookie-banner-content p {
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+.cookie-banner-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+}
+
+.cookie-btn:hover {
+    transform: translateY(-1px);
+}
+
+.cookie-btn-accept {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.cookie-btn-accept:hover {
+    background: var(--primary-dark);
+}
+
+.cookie-btn-reject {
+    background: transparent;
+    color: var(--gray-light);
+    border: 1px solid var(--gray);
+}
+
+.cookie-btn-reject:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+    .cookie-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cookie-banner-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Footer Privacy Link */
+.footer-privacy {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.footer-privacy a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-privacy a:hover {
+    color: var(--primary-light);
+}
+
+/* Privacy Policy Page */
+.privacy-page {
+    padding-top: 120px;
+    padding-bottom: 3rem;
+    max-width: 800px;
+}
+
+.privacy-page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.privacy-update {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.privacy-section {
+    margin-bottom: 2rem;
+}
+
+.privacy-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--primary-light);
+    margin-bottom: 0.75rem;
+}
+
+.privacy-section h3 {
+    font-size: 1rem;
+    color: var(--white);
+    margin: 1rem 0 0.5rem;
+}
+
+.privacy-section p {
+    color: var(--gray-light);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-section ul {
+    color: var(--gray-light);
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+}
+
+.privacy-section a {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+.privacy-section code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+/* Cookie Table */
+.cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.cookie-table th,
+.cookie-table td {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--gray-light);
+}
+
+.cookie-table th {
+    color: var(--white);
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 600px) {
+    .privacy-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .cookie-table {
+        font-size: 0.8rem;
+    }
+
+    .cookie-table th,
+    .cookie-table td {
+        padding: 0.4rem 0.5rem;
+    }
+}
