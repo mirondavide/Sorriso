@@ -81,7 +81,7 @@ async function loadRecommendations(currentProductName) {
 
     // Sample products data (you can fetch this from index.html or a separate data file)
     const allProducts = [
-        { name: 'Margherita', price: '€6,00', description: 'Pomodoro, mozzarella e basilico', image: 'Margherita.webp' },
+        { name: 'Margherita', price: '€6,50', description: 'Pomodoro, mozzarella e basilico', image: 'Margherita.webp' },
         { name: 'Crudo di Parma 24 Mesi', price: '€8,50', description: 'Pomodoro, mozzarella, Prosciutto crudo di Parma 24 mesi', image: 'Crudo-24-Mesi.webp' },
         { name: 'Napoli', price: '€7,50', description: 'Pomodoro, mozzarella, acciughe, origano', image: 'Napoli.webp' },
         { name: 'Salsiccia', price: '€8,00', description: 'Pomodoro, mozzarella, salsiccia', image: 'Salsiccia.webp' },
